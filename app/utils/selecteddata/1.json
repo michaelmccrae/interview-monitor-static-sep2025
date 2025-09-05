@@ -1,0 +1,153 @@
+{
+"Title": "Goldman Sachs AI and working - August 2025", 
+"FileName": 1,
+"SynopsisOverall": "Hosts Alison Nathan and George Lee introduce a discussion on AI’s impact on jobs and bring on economist Joseph Briggs. Early data on AI adoption suggests limited immediate labor-market effects due to low production use.",
+"Speakers": [
+"Allison Nathan",
+"Geroge Lee"
+],
+"Dialogue": [
+{
+"Id": 0,
+"SegmentedSynopsis": "Alison introduces the AI-and-jobs series, names George Lee, and sets the discussion context.",
+"Speaker": "Allison Nathan",
+"SpeakerNumber": 1,
+"Transcript": "To Goldman Sachs Exchanges. I'm Alison Nathan, I'm here with George Lee, co head of the Goldman Sachs Global Institute. Together, we're co hosting a series of episodes exploring the rise of AI and everything it could mean for companies, investors, and economies. George, great to see you again.",
+"TranscriptCount": 49,
+"ResponseRating": [],
+"ResponseAssess": [],
+"ErrorsCompound": [],
+"QuestionsFollowUp": [],
+"LearnMore": []
+    },
+    {
+"Id": 1,
+"SegmentedSynopsis": null,
+"Speaker": "Geroge Lee",
+"SpeakerNumber": 2,
+"Transcript": "You too, Allison. Thank you.",
+"TranscriptCount": 5,
+"ResponseRating": null,
+"ResponseAssess": null,
+"ErrorsCompound": [],
+"QuestionsFollowUp": [],
+"LearnMore": []
+},
+{
+"Id": 2,
+"SegmentedSynopsis": null,
+"Speaker": "Allison Nathan",
+"SpeakerNumber": 1,
+"Transcript": "So, George, today we're discussing one of the biggest anxieties, I would say, about the rise of AI, which is the impact on jobs. I would say even prior to the amazing advances in the technology that we've seen over the last few years and that you and I have discussed a lot on this podcast, there have been a lot of questions about the extent to which AI will ultimately replace workers. And if that happens to a large extent, what industries, what roles will be most impacted. It's now been almost three years, though, since we've seen the launch of ChatGPT, which is very hard to believe.",
+"TranscriptCount": 109,
+"ResponseRating": null,
+"ResponseAssess": null,
+"ErrorsCompound": [],
+"QuestionsFollowUp": [],
+"LearnMore": []
+},
+{
+"Id": 3,
+"SegmentedSynopsis": "George agrees and makes a lighthearted remark about time passing.",
+"Speaker": "Geroge Lee",
+"SpeakerNumber": 2,
+"Transcript": "Think you're That's right. Time flies when you're having fun.",
+"TranscriptCount": 10,
+"ResponseRating": null,
+"ResponseAssess": null,
+"ErrorsCompound": [],
+"QuestionsFollowUp": [],
+"LearnMore": []
+},
+{
+"Id": 4,
+"SegmentedSynopsis": null,
+"Speaker": "Allison Nathan",
+"SpeakerNumber": 1,
+"Transcript": "But that means that we're actually beginning to see some hard data that I think could finally reveal some questions, or at least start to reveal some answers to these questions. So to that end, I'm excited to welcome my colleague from Goldman Investment Research, Joseph Briggs, who leads our global economics research. He's done some really truly informative and formative work, I would say, on the economic implications of AI more broadly and certainly on this topic. Joseph, thanks for joining us.",
+"TranscriptCount": 83,
+"ResponseRating": null,
+"ResponseAssess": null,
+"ErrorsCompound": [],
+"QuestionsFollowUp": [],
+"LearnMore": []
+},
+
+{
+"Id": 5,
+"SegmentedSynopsis": "Alison asks if it’s too early to see labor-market effects given early AI adoption.",
+"Speaker": "Allison Nathan",
+"SpeakerNumber": 1,
+"Transcript": "And so, Joseph, before we just dive into all the details, as I just said, we've talked a lot about the advances of the technology. It's come a long way in the last few years, but I think we'd all agree that the adoption is still pretty early. So is it too early to see tangible signs on the labor market?",
+"TranscriptCount": 61,
+"ResponseRating": 3,
+"ResponseAssess": "Direct, well-structured question about early evidence of AI’s labor-market impact.",
+"ErrorsCompound": [],
+"QuestionsFollowUp": [
+"Which labor indicators would likely show AI effects first?",
+"What time horizon do you expect for detectable impacts?"
+],
+"LearnMore": [
+{
+"Topic": "Labor metrics",
+"Prompt": "Identify indicators best suited to detect early AI impacts."
+},
+{
+"Topic": "Adoption stages",
+"Prompt": "Explain how adoption phases translate into measurable macro effects."
+}
+]
+},
+{
+"Id": 7,
+"SegmentedSynopsis": "Joseph cites 9% US firms using AI in regular production and says it’s too early for broad labor effects.",
+"Speaker": "Geroge Lee",
+"SpeakerNumber": 2,
+"Transcript": "Yeah. So when we look at adoption, we're currently tracking about nine percent of companies in the US using AI for regular production. Now, this number is probably a little bit lower than some of the, you know, more eye popping adoption rates that get picked up in the media. But the definition that we're using when we say nine percent is regular production for goods and services over the last two weeks. And I think this is the right definition to keep in mind because it's really what is going to be necessary.\n\nCompanies using AI in regular production to drive significant productivity impacts. Now, given that adoption rates are only at nine percent, it's not too surprising that we haven't seen a large impact or really any sort of meaningful impact in the overall labor market data yet.",
+"TranscriptCount": 140,
+"ResponseRating": 3,
+"ResponseAssess": "Fully answers the question with a concrete adoption metric, definition, and rationale for limited labor-market impact so far.",
+"ErrorsCompound": [],
+"QuestionsFollowUp": [
+"How is the 9% measured and which survey is this from?",
+"Which sectors show the highest production use today?",
+"Do international adoption rates differ meaningfully?",
+"What leading indicators could signal a turning point?"
+],
+"LearnMore": [
+{
+"Topic": "AI adoption",
+"Prompt": "Detail measurement approaches for firm-level AI production use."
+},
+{
+"Topic": "Diffusion lag",
+"Prompt": "Explore why productivity gains lag technology adoption."
+},
+{
+"Topic": "Sector leaders",
+"Prompt": "Identify industries with early, material AI deployment."
+},
+{
+"Topic": "Measurement lags",
+"Prompt": "Explain delays before macro data reflect firm-level changes."
+},
+{
+"Topic": "Use-case maturity",
+"Prompt": "Assess which AI use cases are ready for scaled production."
+},
+{
+"Topic": "Labor reallocation",
+"Prompt": "Describe worker transitions during early AI adoption phases."
+},
+{
+"Topic": "Policy context",
+"Prompt": "Review policies that can accelerate diffusion and mitigate disruptions."
+},
+{
+"Topic": "Global comparison",
+"Prompt": "Compare AI production adoption across major economies."
+}
+]
+}
+]
+}
