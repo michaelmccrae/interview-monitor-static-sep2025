@@ -20,6 +20,12 @@ import {
   ChartLegendContent
 } from "@/components/ui/chart"
 
+interface CustomTickProps {
+  x?: number
+  y?: number
+  payload?: { value: string }
+}
+
 export const description = "A stacked horizontal bar chart"
 
 
@@ -65,11 +71,10 @@ const guestDiffText = `Guest response to the question is ${guestDifferencePct.to
 
 
 // Custom Y-Axis Tick Component
-const CustomYAxisTick = (props: TickProps) => {
-  const { x, y, payload } = props;
-  const isMatch = payload.value === summationMatch;
-  const fontWeight = isMatch ? "bold" : "normal";
-  const fill = isMatch ? "#000" : "#888"; // Use a specific grey color for non-matches
+const CustomYAxisTick = ({ x = 0, y = 0, payload }: CustomTickProps) => {
+  const isMatch = payload?.value === summationMatch
+  const fontWeight = isMatch ? "bold" : "normal"
+  const fill = isMatch ? "#000" : "#888"
 
   return (
     <g transform={`translate(${x},${y})`}>
