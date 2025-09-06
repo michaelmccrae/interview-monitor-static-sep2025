@@ -7,7 +7,7 @@
 import Two from '../../../utils/selecteddata/mobile2.json';
 
 
-import { useMemo } from 'react'
+// import { useMemo } from 'react'
 import { Button } from "@/components/ui/button";
 import {
   Breadcrumb,
@@ -220,7 +220,7 @@ export default function Version({ id, fileName }: VersionProps) {
                 const [claim, explanation] = error.split(" - ");
                 return (
                   <li key={index} className="">
-                    <span className="font-semibold">"{claim.trim()}"</span>
+                    <span className="font-semibold">&ldquo;{claim.trim()}&ldquo;</span>
                     {explanation ? ` - ${explanation.trim()}` : ""}
                   </li>
                 );
