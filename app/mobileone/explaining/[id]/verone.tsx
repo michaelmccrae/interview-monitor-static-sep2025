@@ -32,7 +32,8 @@ export interface DialogueItem {
   Transcript: string
   TranscriptCount: number
   ResponseRating: number | null
-  ResponseAssess: string | null
+  ResponseAssessGood: string | null
+  ResponseAssessBad: string | null
   ErrorsCompound: string[]
   QuestionsFollowUp: string[]
   LearnMore: LearnMoreItem[]
@@ -158,7 +159,9 @@ export default function Version({ id, fileName }: VersionProps) {
         </p>
 
         <div className="pb-2">
-          <div>{selectedDialogue.ResponseAssess}</div>
+          <div><span className="font-semibold">GOOD:</span> {selectedDialogue.ResponseAssessGood}</div>
+          <div><span className="font-semibold">BAD:</span> {selectedDialogue.ResponseAssessBad}</div>
+
         </div>
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 

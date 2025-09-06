@@ -10,7 +10,7 @@
       "SegmentedSynopsis": "Alison introduces the topic of commodity volatility amid geopolitical tensions and invites Dan to discuss the impact.",
       "Speaker": "Alison Nathan",
       "SpeakerNumber": 1,
-      "Transcript": "Geopolitical tensions, trade policies, and a slowing economy are driving significant volatility across gold, oil, and other commodities. So what's the outlook from here? I'm Allison Nathan, and this is Goldman Sachs Exchanges. For today's episode, I'm speaking with my colleague in Goldman Sachs Research, Dan Stroivan, co head of global commodities research and head of oil research, to talk about how recent events, notably the Middle East conflict and evolving tariff policies, are affecting the broader commodity and economic landscape. Dan, welcome back to the program.",
+      "Transcript": "Geopolitical tensions, trade policies, and a slowing economy are driving significant volatility across gold, oil, and other commodities. So what's the outlook from here? I'm Allison Nathan, and this is Goldman Sachs Exchanges. For today's episode, I'm speaking with my colleague in Goldman Sachs Research, Dan Stroivan, co head of global commodities research and head of oil research.",
       "TranscriptCount": 93,
       "ResponseRating": null,
       "ResponseAssess": null,
@@ -36,7 +36,7 @@
       "SegmentedSynopsis": "Alison asks why oil prices retreated quickly after initial spikes amid Middle East tensions.",
       "Speaker": "Alison Nathan",
       "SpeakerNumber": 1,
-      "Transcript": "So let's start with oil. I think the obvious place to start. Uh, oil prices have been very volatile amid these recent developments in The Middle East, but I think what's most striking to me is how quickly they actually retreated from the recent highs, and they're still at lower levels than I think many people would have expected given the recent developments. So why is this?",
+      "Transcript": "Oil prices have been very volatile amid these recent developments in The Middle East, but I think what's most striking to me is how quickly they actually retreated from the recent highs, and they're still at lower levels than I think many people would have expected given the recent developments. So why is this?",
       "TranscriptCount": 65,
       "ResponseRating": null,
       "ResponseAssess": null,
@@ -52,9 +52,10 @@
       "Transcript": "Yeah. Absolutely. So we estimate that the geopolitical risk premium in oil spiked to over $15 per barrel on on Sunday night just just a week ago. And then twenty four hour later, it was just worth only a couple of dollars per barrel based on the fact that oil prices were nearly back to pre escalation levels. And also, if you look at options markets. If you look at option markets and look at the probability of large supply disruptions, it's pretty low as estimated by options markets, below 4% or so. And the question is why is that? I think the first reason is that oil traders have now experienced several episodes with major geopolitical shocks, but actually no disruptions to oil flows, with barrels still flowing. I think the second reason is that Iran's response quite muted. Both The US and Qatar got a heads up, and there were no damages. Third, I think both The US and China have very big incentives to make sure that oil flows continue, in particular, through the Strait Of Hormuz. And President Trump, his great focus on energy affordability, in particular, is super focused on preventing those disruptions. And then last but not least, I think a lot of traders are reluctant to position for sharp price upside as they share a review that the markets will start to see large inventory builds from the fall fall onwards.",
       "TranscriptCount": 198,
       "ResponseRating": 2,
-      "ResponseAssess": "The response highlights resilience in oil markets, with traders expecting continued flows and low disruption risk despite geopolitical tensions. However, it downplays potential vulnerabilities by assuming past resilience guarantees future stability, which may overlook the possibility of sudden escalations.",
+      "ResponseAssessGood": "The response highlights resilience in oil markets, with traders expecting continued flows and low disruption risk despite geopolitical tensions.",
+      "ResponseAssessBad": "Response downplays potential vulnerabilities by assuming past resilience guarantees future stability, which may overlook the possibility of sudden escalations.",
       "ErrorsCompound": [
-        "President Trump, his great focus on energy affordability, in particular, is super focused on preventing those disruptions - Outdated as Trump was no longer president during recent Middle East events.",
+        "If you look at option markets and look at the probability of large supply disruptions, it's pretty low as estimated by options markets, below 4% or so. -  Analysts have estimated the disruption risk at around 10-15%, not below 4%.",        
         "So we estimate that the geopolitical risk premium in oil spiked to over $15 per barrel on on Sunday night just just a week ago - Analysts estimate that actual increase was closer to $10 per barrel.", 
         "Third, I think both The US and China have very big incentives to make sure that oil flows continue, in particular, through the Strait Of Hormuz -  Failed to mention India"
       ],
@@ -76,6 +77,30 @@
         {
           "Topic": "Strait of Hormuz",
           "Prompt": "Outline the strategic importance of the Strait of Hormuz for oil transport."
+        },
+        {
+          "Topic": "Petrodollar System",
+          "Prompt": "Summarize how oil trade being priced in U.S. dollars shapes global finance."
+        },
+        {
+          "Topic": "OPEC+ Decisions",
+          "Prompt": "Explain how OPEC+ production targets influence global oil markets."
+        },
+        {
+          "Topic": "Shipping Insurance",
+          "Prompt": "Discuss how rising geopolitical risks affect tanker insurance costs."
+        },
+        {
+          "Topic": "Energy Substitutes",
+          "Prompt": "Explore how renewables and natural gas can buffer oil market shocks."
+        },
+        {
+          "Topic": "U.S. Strategic Petroleum Reserve",
+          "Prompt": "Describe the purpose of the SPR and how it is used during supply crises."
+        },
+        {
+          "Topic": "Hedging in Airlines",
+          "Prompt": "Explain why airlines hedge fuel costs and how it ties to oil volatility."
         }
       ]
     },
@@ -100,19 +125,56 @@
       "Transcript": "Yeah. So I mean, this the last few weeks are are a reminder that geopolitics can cause, potentially very significant price upside if we were to see actual disruptions. To be clear, our base case assumes no disruptions. But we estimate that crude could spike above $90 per barrel if Iran supply were to drop sharply and in extreme tail scenario where the state of Hormuz were to be disrupted for us on a sustained basis, oil prices could spike above $110 per barrel. To be clear, we think these these are tail scenarios. But, yeah, the geopolitical geopolitical situation is currently not necessarily, you know, in a stable stable equilibrium. So we'll we'll keep we'll keep watching the geopolitical risks.",
       "TranscriptCount": 110,
       "ResponseRating": 3,
-      "ResponseAssess": "Provides reasonable, data-driven price forecasts and clarifies these as low-probability tail risks.",
+       "ResponseAssessGood": "The speaker makes it clear that disruptions are not the base case but could cause sharp price spikes. This helps frame the discussion responsibly.",
+      "ResponseAssessBad": "Talks only about short-term spikes, without touching on medium-term implications (e.g., policy responses, substitution effects).",
       "ErrorsCompound": [
-        "the state of Hormuz were to be disrupted for us on a sustained basis - Should be 'Strait of Hormuz'; typo impacts clarity."
+        "To be clear, we think these these are tail scenarios. - Analysts have these risks as having a higher probability."
       ],
       "QuestionsFollowUp": [
-        "What contingency plans are in place for oil supply disruptions through the Strait of Hormuz?"
+        "What contingency plans are in place for oil supply disruptions through the Strait of Hormuz?",
+        "How would futures and options markets likely react to such a disruption scenario?",
+        "What role would U.S. or IEA strategic petroleum reserves play if supply from Iran were curtailed?",
+        "Are these risks more relevant for traders with short time horizons, or should long-term investors be repositioning as well?"
       ],
       "LearnMore": [
         {
-          "Topic": "Oil Pricing",
-          "Prompt": "Explore factors that cause sharp oil price spikes during geopolitical crises."
+          "Topic": "Oil Geopolitics",
+          "Prompt": "Explain how Middle East tensions affect oil supply and pricing."
+        },
+        {
+          "Topic": "Options Markets",
+          "Prompt": "Describe how options reflect perceived supply disruption risks."
+        },
+        {
+          "Topic": "Strait of Hormuz",
+          "Prompt": "Outline the strategic importance of the Strait of Hormuz for oil transport."
+        },
+        {
+          "Topic": "Petrodollar System",
+          "Prompt": "Summarize how oil trade being priced in U.S. dollars shapes global finance."
+        },
+        {
+          "Topic": "OPEC+ Decisions",
+          "Prompt": "Explain how OPEC+ production targets influence global oil markets."
+        },
+        {
+          "Topic": "Shipping Insurance",
+          "Prompt": "Discuss how rising geopolitical risks affect tanker insurance costs."
+        },
+        {
+          "Topic": "Energy Substitutes",
+          "Prompt": "Explore how renewables and natural gas can buffer oil market shocks."
+        },
+        {
+          "Topic": "U.S. Strategic Petroleum Reserve",
+          "Prompt": "Describe the purpose of the SPR and how it is used during supply crises."
+        },
+        {
+          "Topic": "Hedging in Airlines",
+          "Prompt": "Explain why airlines hedge fuel costs and how it ties to oil volatility."
         }
       ]
+
     },
     {
       "Id": 6,
@@ -135,11 +197,15 @@
       "Transcript": "I think it was definitely scary for investors and policymakers going through it. At some point, if you looked at the polymarket prediction market, the probability of a of a disruption of the Strait Of Hormuz spiked to 60% at some point. And I do think that policymakers, especially in China, will likely double down on diversifying their supply of energy. In practice, that means continue to invest in power, electrifying the economy, coal as well, basically boost the supply of everything that you have at home. China continues to import about two thirds of its oil consumption from the rest of the world, and about 50% of its imports are coming from The Strait. So I think this is going to strengthen this this key trend of diversifying, you know, away from foreign oil and gas imports for the Chinese economy, which is bearish oil and gas, but but bullish, you know, for copper and and some of the other green green metals.",
       "TranscriptCount": 141,
       "ResponseRating": 3,
-      "ResponseAssess": "Accurately highlights China’s growing energy diversification and the consequent commodity demand realignment.",
-      "ErrorsCompound": [],
+       "ResponseAssessGood": "Recognizes that China won’t just lean on renewables but also coal and electrification, which shows realism.",
+      "ResponseAssessBad": "Says the probability spiked to 60%, but doesn’t explain why it fell back down or how reliable such markets are.",
+      "ErrorsCompound": ["In practice, that means continue to invest in power, electrifying the economy, coal as well, basically boost the supply of everything that you have at home. -  China is also investing heavily in renewables and nuclear, not just coal and electrification."],
       "QuestionsFollowUp": [
         "What specific green metals are poised to benefit from China's diversification?",
-        "How might China's coal investment impact global emissions?"
+        "How might China's coal investment impact global emissions?",
+        "You noted China doubling down on diversification — how quickly can they realistically reduce reliance on oil from the Strait?",
+        "You said this trend is bearish for oil and gas but bullish for copper and green metals — could you expand on which metals stand to benefit most?",
+        "How should policymakers in oil-exporting countries respond to this potential long-term demand erosion?"
       ],
       "LearnMore": [
         {
@@ -149,8 +215,41 @@
         {
           "Topic": "Green Metals",
           "Prompt": "Explain copper's role in the green energy transition."
+        },
+        {
+          "Topic": "Coal in China",
+          "Prompt": "Describe why coal remains central to China's energy security strategy."
+        },
+        {
+          "Topic": "Rare Earths",
+          "Prompt": "Outline the importance of rare earth metals for renewable technologies."
+        },
+        {
+          "Topic": "Battery Metals",
+          "Prompt": "Explain how lithium, nickel, and cobalt demand is tied to EV growth."
+        },
+        {
+          "Topic": "Strategic Petroleum Reserves",
+          "Prompt": "Analyze how China and other nations use reserves to buffer supply shocks."
+        },
+        {
+          "Topic": "Geopolitical Chokepoints",
+          "Prompt": "Highlight other critical oil transit routes besides the Strait of Hormuz."
+        },
+        {
+          "Topic": "Energy Transition and Inflation",
+          "Prompt": "Discuss how shifting from fossil fuels to renewables impacts inflation trends."
+        },
+        {
+          "Topic": "Commodity Supercycles",
+          "Prompt": "Explore the idea of green energy driving a new long-term commodity boom."
+        },
+        {
+          "Topic": "U.S.–China Energy Rivalry",
+          "Prompt": "Examine how energy security concerns shape U.S.–China relations."
         }
       ]
+
     }
   ]
 }
