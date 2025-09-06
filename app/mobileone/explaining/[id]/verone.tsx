@@ -28,6 +28,31 @@ type VersionProps = {
   fileName?: string
 }
 
+export interface LearnMoreItem {
+  Topic: string
+  Prompt: string
+}
+
+export interface DialogueItem {
+  Id: number
+  SegmentedSynopsis: string
+  Speaker: string
+  SpeakerNumber: number
+  Transcript: string
+  TranscriptCount: number
+  ResponseRating: number | null
+  ResponseAssess: string | null
+  ErrorsCompound: string[] // always array of strings
+  QuestionsFollowUp: string[]
+  LearnMore: LearnMoreItem[]
+}
+
+export interface TranscriptData {
+  SynopsisOverall: string
+  Speakers: string[]
+  Dialogue: DialogueItem[]
+}
+
 
 // The `params` object is passed as a prop to the component.
 export default function Version({ id, fileName }: VersionProps) {
