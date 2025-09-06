@@ -37,12 +37,14 @@ export default function Version({ id, fileName }: VersionProps) {
   console.log("fileName:", fileName)
 
   // Example: load JSON depending on id
-  const data = useMemo(() => {
-    // pick One or Two or something dynamic
-    return numericId === 1 ? require('../../../utils/selecteddata/mobile2.json') : require('../../../utils/selecteddata/mobile2.json')
-  }, [numericId])
+  // const data = useMemo(() => {
+  //   // pick One or Two or something dynamic
+  //   return numericId === 1 ? require('../../../utils/selecteddata/mobile2.json') : require('../../../utils/selecteddata/mobile2.json')
+  // }, [numericId])
 
-  const selectedDialogue = data.Dialogue.find((d: any) => d.Id === numericId)
+  const data = Two
+
+  const selectedDialogue = data.Dialogue.find((d: unknown) => d.Id === numericId)
 
   if (!selectedDialogue) {
     return <div className="p-6">Dialogue not found for id {id}</div>
@@ -58,7 +60,7 @@ export default function Version({ id, fileName }: VersionProps) {
     return (
       <div className="p-6 text-center">
         <h1 className="text-2xl font-bold mb-4">Dialogue Not Found</h1>
-        <p>The dialogue with ID "{fileName}" does not exist.</p>
+        <p>The dialogue with ID &quot;{fileName}&quot; does not exist.</p>
       </div>
     );
   }
