@@ -65,7 +65,7 @@ const guestDiffText = `Guest response to the question is ${guestDifferencePct.to
 
 
 // Custom Y-Axis Tick Component
-const CustomYAxisTick = (props) => {
+const CustomYAxisTick = (props: TickProps) => {
   const { x, y, payload } = props;
   const isMatch = payload.value === summationMatch;
   const fontWeight = isMatch ? "bold" : "normal";
