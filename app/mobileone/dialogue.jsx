@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Star, Link2 } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import { TRANSCRIPTLIMIT, TOTALSTARS } from '../utils/values.js';
 
@@ -22,15 +22,12 @@ const App = ({ selectedData }) => {
       index++;
 
       if (index < transcriptData.length) {
-        // 👇 delay can be varied per item
-        const delay = 800 + index * 100; // example: increase delay slightly each step
+        const delay = 800 + index * 100; 
         setTimeout(revealNext, delay);
       }
     };
 
-    // start the first reveal
     setTimeout(revealNext, 400);
-
   }, [transcriptData]);
 
   const renderStarsDialogue = (count) => (
@@ -76,16 +73,13 @@ const App = ({ selectedData }) => {
       <div className="w-full max-w-2xl bg-white p-6 rounded-xl space-y-4">
         {transcriptData.slice(0, visibleCount).map((message, index) => {
           const beforeHyphen = getBeforeDelimiter(message.ErrorsCompound);
+          const isLinked = message.TranscriptCount >= TRANSCRIPTLIMIT;
 
           const content = (
             <div
               className={`flex ${
-                message.TranscriptCount >= TRANSCRIPTLIMIT
-                  ? 'cursor-pointer hover:opacity-60 transition'
-                  : ''
-              } ${
-                message.Id % 2 === 0 ? 'justify-end' : 'justify-start'
-              }`}
+                isLinked ? 'cursor-pointer hover:opacity-60 transition' : ''
+              } ${message.Id % 2 === 0 ? 'justify-end' : 'justify-start'}`}
             >
               <div
                 className={`max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 rounded-xl shadow-sm text-sm sm:text-base
@@ -97,15 +91,19 @@ const App = ({ selectedData }) => {
                     4: 'bg-orange-300 rounded-br-sm',
                     5: 'bg-red-300 rounded-bl-sm',
                   }[message.SpeakerNumber] || 'bg-gray-200 text-gray-800'
-                }
-              `}
+                }`}
               >
                 <div className="font-semibold mb-1">
                   <span>
-                    <span style={{ verticalAlign: 'middle' }}>
+                    <span
+                      style={{
+                        verticalAlign: 'middle',
+                        textDecoration: isLinked ? 'underline' : 'none',
+                      }}
+                    >
                       {message.Speaker}
                     </span>
-                    {message.TranscriptCount > TRANSCRIPTLIMIT && (
+                    {isLinked && message.ResponseRating > 0 && (
                       <span
                         style={{
                           display: 'inline-block',
@@ -113,21 +111,18 @@ const App = ({ selectedData }) => {
                           marginLeft: '4px',
                         }}
                       >
-                        <Link2 />
+                        {renderStarsDialogue(message.ResponseRating)}
                       </span>
                     )}
                   </span>
                 </div>
-                <div className="pb-2">
-                  {message.ResponseRating > 0 &&
-                    renderStarsDialogue(message.ResponseRating)}
-                </div>
+                <div className="pb-2"></div>
                 <p>{highlightText(message.Transcript, beforeHyphen)}</p>
               </div>
             </div>
           );
 
-          return message.TranscriptCount >= TRANSCRIPTLIMIT ? (
+          return isLinked ? (
             <Link
               key={index}
               href={{

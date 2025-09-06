@@ -8,7 +8,7 @@ import { Mic } from 'lucide-react';
 const Home = () => {
   return (
     <div>
-      <div className="text-xl font-bold p-4 text-center">Podcast Monitor</div>
+      <div className="text-xl font-bold p-4 text-center">Interview Monitor</div>
 
       {/* Centered mic with pulsing circle */}
       <div className="flex justify-center p-4">
