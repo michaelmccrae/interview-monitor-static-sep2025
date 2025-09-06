@@ -23,7 +23,7 @@ import {
 interface CustomTickProps {
   x?: number
   y?: number
-  payload?: { value: string }
+  payload: { value: string }
 }
 
 export const description = "A stacked horizontal bar chart"
