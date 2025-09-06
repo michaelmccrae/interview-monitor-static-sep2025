@@ -1,7 +1,7 @@
 "use client"
 
 import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, XAxis, YAxis, Cell } from "recharts"
 
 import {
   Card,
@@ -28,9 +28,6 @@ interface CustomTickProps {
 
 export const description = "A stacked horizontal bar chart"
 
-
-
-
 const chartData = [
   { summation: "Oil prices", excerpt: "Talk to use about oil...", interviewer: 186, guest: 880 },
   { summation: "Recession odds", excerpt: "What are the odds of a recession...", interviewer: 78, guest: 553 },
@@ -39,13 +36,11 @@ const chartData = [
   { summation: "Federal Reserve", excerpt: "How will the Fed's next meeting affect...", interviewer: 94, guest: 310 },
 ]
 
-
 // --- calculate averages ---
 const avgInterviewer =
-  chartData.reduce((sum, d) => sum + d.interviewer, 0) / chartData.length;
+  chartData.reduce((sum, d) => sum + d.interviewer, 0) / chartData.length
 const avgGuest =
-  chartData.reduce((sum, d) => sum + d.guest, 0) / chartData.length;
-
+  chartData.reduce((sum, d) => sum + d.guest, 0) / chartData.length
 
 const chartConfig = {
   interviewer: {
@@ -59,16 +54,15 @@ const chartConfig = {
 } satisfies ChartConfig
 
 // Pick a random item from chartData
-const randomItem = chartData[Math.floor(Math.random() * chartData.length)];
-const summationMatch = randomItem.summation;
+const randomItem = chartData[Math.floor(Math.random() * chartData.length)]
+const summationMatch = randomItem.summation
 
 // Compare guest value vs guest mean
-const guestDifferencePct = ((randomItem.guest - avgGuest) / avgGuest) * 100;
+const guestDifferencePct = ((randomItem.guest - avgGuest) / avgGuest) * 100
 
-const guestDiffText = `Guest response to the question is ${guestDifferencePct.toFixed(
+const guestDiffText = `Guest response is ${guestDifferencePct.toFixed(
   2
-)}% ${guestDifferencePct >= 0 ? "above" : "below"} the average.`;
-
+)}% ${guestDifferencePct >= 0 ? "longer" : "shorter"} than the average.`
 
 // Custom Y-Axis Tick Component
 const CustomYAxisTick = ({ x = 0, y = 0, payload }: CustomTickProps) => {
@@ -90,55 +84,67 @@ const CustomYAxisTick = ({ x = 0, y = 0, payload }: CustomTickProps) => {
         {payload.value}
       </text>
     </g>
-  );
-};
+  )
+}
 
 export function ChartBarHorizontal() {
   return (
     <>
-    <ChartContainer config={chartConfig}>
-      <BarChart
-        accessibilityLayer
-        data={chartData}
-        layout="vertical"
-        margin={{
-          left: -20,
-        }}
-      >
-        <XAxis type="number" hide />
-        <YAxis
-          dataKey="summation"
-          type="category"
-          tickLine={false}
-          tickMargin={5}
-          axisLine={false}
-          interval={0}
-          tick={CustomYAxisTick} // Use the custom component here
-          width={150} // Adjust width to prevent long labels from being cut off
-        />
-        <ChartTooltip
-          cursor={false}
-          content={<ChartTooltipContent />}
-        />
-        <ChartLegend content={<ChartLegendContent />} />
-        {/* Stacked bars */}
-        <Bar
-          dataKey="interviewer"
-          stackId="visitors"
-          fill="var(--color-interviewer)"
-          radius={[0, 5, 5, 0]}
-        />
-        <Bar
-          dataKey="guest"
-          stackId="visitors"
-          fill="var(--color-guest)"
-          radius={[0, 5, 5, 0]}
-        />
-      </BarChart>
-    </ChartContainer>
-    <div className="pt-2">{guestDiffText}</div>
-    </>
+      <ChartContainer config={chartConfig}>
+        <BarChart
+          accessibilityLayer
+          data={chartData}
+          layout="vertical"
+          margin={{
+            left: -20,
+          }}
+        >
+          <XAxis type="number" hide />
+          <YAxis
+            dataKey="summation"
+            type="category"
+            tickLine={false}
+            tickMargin={5}
+            axisLine={false}
+            interval={0}
+            tick={CustomYAxisTick}
+            width={150}
+          />
+          <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+          <ChartLegend content={<ChartLegendContent />} />
 
+          {/* Stacked bars */}
+          <Bar
+            dataKey="interviewer"
+            stackId="visitors"
+            fill="var(--color-interviewer)"
+            radius={[0, 5, 5, 0]}
+          >
+            {chartData.map((entry, index) => (
+              <Cell
+                key={`cell-interviewer-${index}`}
+                fillOpacity={entry.summation === summationMatch ? 1 : 0.3}
+              />
+            ))}
+          </Bar>
+          <Bar
+            dataKey="guest"
+            stackId="visitors"
+            fill="var(--color-guest)"
+            radius={[0, 5, 5, 0]}
+          >
+            {chartData.map((entry, index) => (
+              <Cell
+                key={`cell-guest-${index}`}
+                fillOpacity={entry.summation === summationMatch ? 1 : 0.3}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </ChartContainer>
+      <div className="pt-2">{guestDiffText}</div>
+    </>
   )
 }
+
 export default ChartBarHorizontal

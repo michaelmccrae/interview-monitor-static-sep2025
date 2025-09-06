@@ -162,19 +162,7 @@ export default function Version({ id, fileName }: VersionProps) {
         </div>
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
-        <p className="font-bold pb-2">Metrics</p>
-        <div><Chart /></div>
-        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-
-        <p className="font-bold pb-2">Follow Up Questions</p>
-        <ul className="list-disc pl-5">
-          {selectedDialogue.QuestionsFollowUp?.map((question, index) => (
-            <li key={index}>&ldquo;{question}&rdquo;</li>
-          ))}
-        </ul>
-        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-
-        <p className="font-bold pb-2">Potential Errors</p>
+         <p className="font-bold pb-2">Potential Errors</p>
         {selectedDialogue.ErrorsCompound?.length > 0 ? (
           <ul className="list-none">
             {selectedDialogue.ErrorsCompound.map((error, index) => {
@@ -191,6 +179,20 @@ export default function Version({ id, fileName }: VersionProps) {
           <p>No potential errors found</p>
         )}
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+
+        <p className="font-bold pb-2">Metrics</p>
+        <div><Chart /></div>
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+
+        <p className="font-bold pb-2">Follow Up Questions</p>
+        <ul className="list-disc pl-5">
+          {selectedDialogue.QuestionsFollowUp?.map((question, index) => (
+            <li key={index}>&ldquo;{question}&rdquo;</li>
+          ))}
+        </ul>
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+
+       
 
         <p className="font-bold pb-2">Explore Topics</p>
         {selectedDialogue.LearnMore?.length > 0 && (

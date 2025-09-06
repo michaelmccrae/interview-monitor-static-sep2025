@@ -23,7 +23,7 @@ const App = ({ selectedData }) => {
 
       if (index < transcriptData.length) {
         // 👇 delay can be varied per item
-        const delay = 400 + index * 100; // example: increase delay slightly each step
+        const delay = 800 + index * 100; // example: increase delay slightly each step
         setTimeout(revealNext, delay);
       }
     };
