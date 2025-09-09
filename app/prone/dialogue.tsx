@@ -5,9 +5,44 @@ import { Star } from 'lucide-react';
 import Link from 'next/link';
 import { TRANSCRIPTLIMIT, TOTALSTARS } from '../utils/values.js';
 
-const App = ({ selectedData }) => {
+// ---- Types ----
+interface LearnMoreItem {
+  Topic: string;
+  Prompt: string;
+}
+
+interface DialogueEntry {
+  Id: number;
+  SegmentedSynopsis: string;
+  Speaker: string;
+  SpeakerNumber: number;
+  Transcript: string;
+  TranscriptCount: number;
+  ResponseRating?: number | null;
+  ResponseAssess?: string | null;
+  ResponseAssessGood?: string;
+  ResponseAssessBad?: string;
+  ErrorsCompound: string[];
+  MessagesCompound?: string[];
+  QuestionsFollowUp: string[];
+  LearnMore: LearnMoreItem[];
+}
+
+interface SelectedData {
+  SynopsisOverall: string;
+  Speakers: string[];
+  Dialogue: DialogueEntry[];
+  FileName?: string;
+}
+
+interface AppProps {
+  selectedData: SelectedData;
+}
+
+// ---- Component ----
+const App: React.FC<AppProps> = ({ selectedData }) => {
   const transcriptData = selectedData.Dialogue;
-  const fileName = selectedData.FileName;
+  const fileName = selectedData.FileName ?? 'unknown';
 
   const [visibleCount, setVisibleCount] = useState(0);
 
@@ -22,7 +57,7 @@ const App = ({ selectedData }) => {
       index++;
 
       if (index < transcriptData.length) {
-        const delay = 800 + index * 100; 
+        const delay = 800 + index * 100;
         setTimeout(revealNext, delay);
       }
     };
@@ -30,7 +65,7 @@ const App = ({ selectedData }) => {
     setTimeout(revealNext, 400);
   }, [transcriptData]);
 
-  const renderStarsDialogue = (count) => (
+  const renderStarsDialogue = (count: number) => (
     <span className="inline-flex items-baseline">
       {[...Array(TOTALSTARS)].map((_, i) => (
         <Star
@@ -43,14 +78,14 @@ const App = ({ selectedData }) => {
     </span>
   );
 
-  function getBeforeDelimiter(errors = [], delimiter = ' - ') {
+  function getBeforeDelimiter(errors: string[] = [], delimiter = ' - ') {
     if (!Array.isArray(errors) || errors.length === 0) return [];
     return errors.map((item) =>
       item.split(delimiter)[0].trim().replace(/^"|"$/g, '')
     );
   }
 
-  const highlightText = (text, errors) => {
+  const highlightText = (text: string, errors: string[]) => {
     if (!errors || errors.length === 0) return text;
     const escapedErrors = errors.map((error) =>
       error.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').trim()
@@ -103,7 +138,7 @@ const App = ({ selectedData }) => {
                     >
                       {message.Speaker}
                     </span>
-                    {isLinked && message.ResponseRating > 0 && (
+                    {isLinked && message.ResponseRating && message.ResponseRating > 0 && (
                       <span
                         style={{
                           display: 'inline-block',
@@ -111,7 +146,7 @@ const App = ({ selectedData }) => {
                           marginLeft: '4px',
                         }}
                       >
-                       
+                        {renderStarsDialogue(message.ResponseRating)}
                       </span>
                     )}
                   </span>
