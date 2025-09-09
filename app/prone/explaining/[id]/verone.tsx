@@ -190,16 +190,7 @@ export default function Version({ id, fileName }: VersionProps) {
 
 
         
-            <div>
-            <p className="font-bold pb-2">Messaging</p>
-            <ul className="list-disc pl-5 space-y-1 pb-2">
-                <li>Experienced team</li>
-                <li>Well financed</li>
-                <li>High insider ownership</li>
-                <li className="text-gray-400">Safe jurisdiction</li>
-                <li className="text-gray-400">Good infrastructure</li>
-            </ul>
-            </div>
+           
 
 
       </div>

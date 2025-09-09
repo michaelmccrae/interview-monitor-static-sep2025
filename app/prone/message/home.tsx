@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Two from '../utils/selecteddata/prone.json';
+import Two from '../../utils/selecteddata/prone.json';
 import Dialogue from './dialogue';
 import { Mic } from 'lucide-react';
 import Link from "next/link"
@@ -22,7 +22,7 @@ const Home = () => {
         </div>
       </div>
 
-       <div className="flex justify-center space-x-4 p-4">
+     <div className="flex justify-center space-x-4 p-4">
       <Link href="/prone/">
         <Button>Errors</Button>
       </Link>
@@ -31,6 +31,7 @@ const Home = () => {
       </Link>
     </div>
 
+       
 
       <Dialogue selectedData={Two} />
     </div>

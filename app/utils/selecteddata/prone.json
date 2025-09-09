@@ -24,10 +24,11 @@
       "Speaker": "Dan Stroivan",
       "SpeakerNumber": 2,
       "Transcript": "As a junior miner, our primary focus is on advancing our flagship exploration project located in a geologically proven district. Right now, we're aggressively working on delineating a resource through drilling, geophysics, and geochemical analysis. Our goal is to de-risk the asset through technical validation and move it closer to a development-ready stage. We're also keeping an eye out for strategic acquisitions that can complement our portfolio and provide shareholders with upside potential.",
-      "TranscriptCount": 2,
+      "TranscriptCount": 198,
       "ResponseRating": null,
       "ResponseAssess": null,
-      "ErrorsCompound": [],
+      "ErrorsCompound": ["We're also keeping an eye out for strategic acquisitions that can complement our portfolio and provide shareholders with upside potential. -  News release said that the company is emphasizing organic growth and will only look at acquisitions in rare circumstances."],
+      "MessagesCompound": ["Our goal is to de-risk the asset through technical validation and move it closer to a development-ready stage. - The project is moving ahead quickly."],
       "QuestionsFollowUp": [],
       "LearnMore": []
     },
@@ -55,8 +56,8 @@
       "ResponseAssessGood": "The response highlights resilience in oil markets, with traders expecting continued flows and low disruption risk despite geopolitical tensions.",
       "ResponseAssessBad": "Response downplays potential vulnerabilities by assuming past resilience guarantees future stability, which may overlook the possibility of sudden escalations.",
       "ErrorsCompound": [
-        "On the capital markets side, we have a CFO who’s helped raise over $200 million for junior resource companies. - Company actually raised $220 million"
-      ],
+        "On the capital markets side, we have a CFO who’s helped raise over $200 million for junior resource companies. - Company actually raised $220 million"],
+      "MessagesCompound": ["We’ve assembled a tight, experienced team with a mix of technical, financial, and operational backgrounds - Demonstrating that the team has experience."],
       "QuestionsFollowUp": [
         "How might current US administration policies impact oil flow through the Strait of Hormuz?",
         "What inventory build trends are expected from the fall onwards?",
@@ -128,6 +129,7 @@
       "ErrorsCompound": [
         "To be clear, we think these these are tail scenarios. - Analysts have these risks as having a higher probability."
       ],
+      "MessagesCompound": ["It aligns management’s interests with shareholders, builds trust, and shows we have real skin in the game. - Show shareholder alignment"],
       "QuestionsFollowUp": [
         "What contingency plans are in place for oil supply disruptions through the Strait of Hormuz?",
         "How would futures and options markets likely react to such a disruption scenario?",
@@ -198,6 +200,7 @@
        "ResponseAssessGood": "Recognizes that China won’t just lean on renewables but also coal and electrification, which shows realism.",
       "ResponseAssessBad": "Says the probability spiked to 60%, but doesn’t explain why it fell back down or how reliable such markets are.",
       "ErrorsCompound": ["We’re also working toward an initial 43-101 compliant resource estimate, which would be a major milestone. - In May 2025 news release, the company says it is starting work on 43-101 in Q1 2026"],
+      "MessagesCompound": ["In parallel, we’re initiating metallurgical testing and starting baseline environmental studies, which are key steps toward permitting. - The project is moving ahead quickly."],
       "QuestionsFollowUp": [
         "What specific green metals are poised to benefit from China's diversification?",
         "How might China's coal investment impact global emissions?",
