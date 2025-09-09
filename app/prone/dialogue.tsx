@@ -146,7 +146,7 @@ const App: React.FC<AppProps> = ({ selectedData }) => {
                           marginLeft: '4px',
                         }}
                       >
-                        {renderStarsDialogue(message.ResponseRating)}
+                        {/* {renderStarsDialogue(message.ResponseRating)} */}
                       </span>
                     )}
                   </span>
